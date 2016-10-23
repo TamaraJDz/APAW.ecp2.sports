@@ -12,5 +12,8 @@ public abstract class DaoFactory {
         assert factory != null;
         return factory;
     }
+    
+    public abstract SportDao getSportDao();
 
+    public abstract UserDao getUserDao();
 }
