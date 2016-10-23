@@ -1,36 +1,17 @@
 package es.upm.miw.sports.wrappers;
 
 public class UserWrapper {
-	private int id;
-	private String name;
+    private String nick;
 
-	public UserWrapper() {
-	}
+    private String email;
 
-	public UserWrapper(int id, String name) {
-		this.setId(id);
-		this.setName(name);
-	}
+    public UserWrapper(String nick, String email) {
+        this.nick = nick;
+        this.email = email;
+    }
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	@Override
-	public String toString() {
-		return "{\"id\":" + id + ",\"name\":\"" + name + "\"}";
-	}
-
+    @Override
+    public String toString() {
+        return "{\"nick\":\"" + nick + "\", \"email\":\"" + email + "\"}";
+    }
 }
