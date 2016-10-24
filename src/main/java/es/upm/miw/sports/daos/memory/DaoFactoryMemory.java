@@ -10,9 +10,6 @@ public class DaoFactoryMemory extends DaoFactory {
 
 	private UserDao userDao;
 
-	public DaoFactoryMemory() {
-	}
-
 	@Override
 	public SportDao getSportDao() {
 		if (sportDao == null) {
