@@ -9,6 +9,11 @@ public class User {
 	
 	private Sport sport;
 	
+	public User(String nick, String email) {
+		this.nick = nick;
+		this.email = email;
+	}
+
 	public int getId() {
 		return id;
 	}
