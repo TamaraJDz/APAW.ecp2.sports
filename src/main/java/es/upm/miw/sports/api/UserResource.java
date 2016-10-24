@@ -4,6 +4,7 @@ import es.upm.miw.sports.controllers.UserController;
 import es.upm.miw.sports.exceptions.NoValidEmailException;
 import es.upm.miw.sports.exceptions.NoValidNickException;
 import es.upm.miw.sports.exceptions.UserExistsException;
+import es.upm.miw.sports.wrappers.UserListWrapper;
 
 public class UserResource {
 
@@ -22,5 +23,9 @@ public class UserResource {
 
 	private boolean checkField(String field) {
 		return field == null || field.isEmpty();
+	}
+
+	public UserListWrapper userList() {
+		return new UserController().userList();
 	}
 }

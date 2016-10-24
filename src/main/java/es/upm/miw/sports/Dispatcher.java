@@ -18,12 +18,21 @@ public class Dispatcher {
 	}
 
 	public void doGet(HttpRequest request, HttpResponse response) {
-
+		if ("users".equals(request.getPath())) {
+            response.setBody(userResource.userList().toString());
+        }
 	}
 
 	public void doPost(HttpRequest request, HttpResponse response) {
         switch (request.getPath()) {
-        // POST **/users body="nick:email"
+        case "sports":
+            try {
+                sportResource.createSport(request.getBody());
+                response.setStatus(HttpStatus.CREATED);
+            } catch (Exception e) {
+                responseError(response, e);
+            }
+            break;
         case "users":
         	String requestBody = request.getBody();
             try {
