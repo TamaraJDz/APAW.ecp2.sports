@@ -60,7 +60,6 @@ public class ApiArchitectureMain {
 		request.setPath("noPath");
 		request.setBody("");
 		this.request();
-
 	}
 
 	private void request() {
